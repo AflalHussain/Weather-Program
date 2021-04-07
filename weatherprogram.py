@@ -1,9 +1,10 @@
 from pprint import pprint
 import json
 import requests
+from secrets import OpenWeatherMapAccountKey
 
 city_name=input('Enter city name:')
-API_Key='b1c3f99842642e57065756f29ff7eba4'
+API_Key=OpenWeatherMapAccountKey
 
 base_url='http://api.openweathermap.org/data/2.5/weather'
 response=requests.get(base_url+"?q="+city_name+"&appid="+API_Key)
